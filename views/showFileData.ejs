@@ -9,15 +9,30 @@
 </head>
 
 <body>
-    <div class="w-full h-screen bg-gray-900 text-white p-10 text-white">
-        <a href="/" class="text-blue-500 text-xl p-5 mb-2 inline-block"> Go back to home</a>
+    <div class="w-full h-screen bg-gray-900 text-white p-10">
         <h1 class="text-3xl p-5 text-yellow-300">
-            <%= fileName%>
+            <%= fileName %>
         </h1>
 
-        <p class="text-xl p-5  mt-5 font-light">
-            <%= fileData %>
-        </p>
+        <form action="/editDetails" method="post">
+            <input type="hidden" name="fileName" value="<%= fileName %>"> <!-- Add this hidden input -->
+
+            <div>
+                <input class="w-full h-[300px] outline-none bg-gray-700 p-3 m-2 rounded-md"
+                    placeholder="Write your Title/Heading with preferred file extension" name="previousDetails"
+                    value="<%= fileData %>"> <!-- This will show the previous details -->
+
+                <input class="w-full h-[100%] outline-none bg-gray-700 p-3 m-2 rounded-md"
+                    placeholder="Write new details" name="newDetails" value="<%= fileData %>">
+                <!-- This will now also show the existing details -->
+            </div>
+
+            <div class="mt-5">
+                <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded-md">Back</a>
+                <input class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 m-2 rounded-md"
+                    type="submit" value="Save Details">
+            </div>
+        </form>
     </div>
 </body>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="w-full h-screen bg-gray-900 text-white">
+    <div class="w-full h-screen bg-gray-900 text-white">
+        <h1 class="text-4xl text-center p-2 text-yellow-300">Update file name and its details</h1>
+        <div class="p-5 m-2 form ">
+            <form method='post' action='/edit'>
+                <p class="p-1 mx-2 text-md font-semibold">Previous Name</p>
+                <input class="w-full outline-none bg-gray-700 p-3 m-2 rounded-md" name="previous"
+                    placeholder="Write your Title/Heading" value="<%= fileName %>">
+
+                <!-- Updated file name field -->
+                <p class="p-1 mx-2 text-md font-semibold">New Name</p>
+                <input class="w-full outline-none bg-gray-700 p-3 m-2 rounded-md" name="new" required
+                    placeholder="Write your Title/Heading">
+
+                <!-- <p class="p-1 mx-2 text-md font-semibold">Details</p>
+                <textarea class="w-full outline-none text-white bg-gray-700 resize-none p-3 m-2 rounded-md" name="details"
+                    placeholder="Write your task details here"> <%= fileData %></textarea> -->
+
+                <!-- Updated details sections here -->
+                <!-- <p class="p-1 mx-2 text-md font-semibold">New Name</p>
+                <textarea class="w-full outline-none bg-gray-700 resize-none p-3 m-2 rounded-md" name="details"
+                    placeholder="Write your task details here"> <%= fileData %> </textarea> -->
+
+               <a href="/"
+               class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2  rounded-md"
+               >Back</a>
+                <input class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 m-2  rounded-md"
+                    type="submit" value="Update Task">
+
+            </form>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
